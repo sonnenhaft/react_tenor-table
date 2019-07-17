@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --open --mode development",
+    "start": "webpack-dev-server --open --mode development ",
+    "start:production": "webpack-dev-server --open --mode production --port=8001",
     "build": "webpack --mode production"
   },
   "author": "",
@@ -24,6 +25,7 @@
   },
   "dependencies": {
     "axios": "^0.19.0",
+    "lodash-es": "^4.17.14",
     "ramda": "^0.26.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
