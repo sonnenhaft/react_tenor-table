@@ -1,9 +1,13 @@
-import webpack from 'webpack';
+import webpack from 'webpack'
 
 const HtmlWebPackPlugin = require('html-webpack-plugin')
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
 
-const config: webpack.Configuration = {
+interface SystemEnvVariables {
+    mode: string
+}
+
+module.exports = (ignored: any, env: SystemEnvVariables): webpack.Configuration => ({
     entry: './src',
     resolve: { extensions: ['.tsx', '.js'] },
     module: {
@@ -11,10 +15,12 @@ const config: webpack.Configuration = {
             { use: 'babel-loader', test: /\.(js|ts)(x?)$/ }
         ]
     },
+    output: {
+        path: require('path').resolve(__dirname, 'docs'),
+        filename: 'index.js'
+    },
     plugins: [
         new HtmlWebPackPlugin({ template: './src/index.html', filename: './index.html' }),
-        // new BundleAnalyzerPlugin({})
+        ...(env.mode === 'production' ? [] : [new BundleAnalyzerPlugin({})])
     ]
-}
-
-module.exports = config
+})

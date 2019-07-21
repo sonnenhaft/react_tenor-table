@@ -5,7 +5,10 @@ import { Widget } from './Widget'
 // import { where } from 'ramda'
 
 export const App = () => <div>
-    TS configured
+    <p>
+        <a href="/storybook">storybook</a>
+    </p>
 
+    TS configured
     <Widget/>
 </div>
