@@ -1,7 +1,9 @@
 import webpack from 'webpack';
 
-const HtmlWebPackPlugin = require('html-webpack-plugin');
-const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+// import HtmlWebPackPlugin from 'html-webpack-plugin'
+
+const HtmlWebPackPlugin = require('html-webpack-plugin')
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
 
 const config: webpack.Configuration = {
     entry: './src',
@@ -15,6 +17,6 @@ const config: webpack.Configuration = {
         new HtmlWebPackPlugin({ template: './src/index.html', filename: './index.html' }),
         // new BundleAnalyzerPlugin({})
     ]
-};
+}
 
-module.exports = config;
+module.exports = config
