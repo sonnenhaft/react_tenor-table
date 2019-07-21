@@ -4,11 +4,10 @@
   "description": "Proper ts config for webpack and storybook for react project",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --open --mode development ",
     "start:production": "webpack-dev-server --open --mode production --port=8001",
-    "build": "webpack --mode production",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "start": "webpack-dev-server --open --mode development ",
+    "build": "webpack --mode production && build-storybook -c .storybook -o docs/storybook",
+    "storybook": "start-storybook -p 6006"
   },
   "author": "Vladimir Shein",
   "license": "MIT",
