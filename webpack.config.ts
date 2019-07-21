@@ -1,7 +1,5 @@
 import webpack from 'webpack';
 
-// import HtmlWebPackPlugin from 'html-webpack-plugin'
-
 const HtmlWebPackPlugin = require('html-webpack-plugin')
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
 
