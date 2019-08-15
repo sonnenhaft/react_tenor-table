@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
+import * as React  from 'react'
 
-export class Widget extends Component {
+export class Widget extends React.Component {
     render() {
         return (
             <div style={{ color: 'white', background: 'black' }}>

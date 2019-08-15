@@ -6,8 +6,10 @@
   "scripts": {
     "start:production": "webpack-dev-server --open --mode production --port=8001",
     "start": "webpack-dev-server --open --mode development ",
-    "build": "webpack --mode production && build-storybook -c .storybook -o docs/storybook",
-    "storybook": "start-storybook -p 6006"
+    "build": "webpack --mode production && build-storybook -c .storybook -o docs/storybook && npm run jest:coverage",
+    "storybook": "start-storybook -p 6006",
+    "jest": "jest --watch -i",
+    "jest:coverage": "jest --collect-coverage -i"
   },
   "author": "Vladimir Shein",
   "license": "MIT",
@@ -21,6 +23,8 @@
     "@storybook/addon-links": "^5.1.9",
     "@storybook/addons": "^5.1.9",
     "@storybook/react": "^5.1.9",
+    "@types/enzyme": "^3.10.3",
+    "@types/jest": "^24.0.17",
     "@types/lodash-es": "^4.17.3",
     "@types/node": "^12.7.2",
     "@types/ramda": "^0.26.16",
@@ -33,9 +37,15 @@
     "@types/webpack": "^4.32.0",
     "@types/webpack-dev-server": "^3.1.7",
     "babel-loader": "^8.0.6",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.14.0",
+    "enzyme-to-json": "^3.4.0",
     "html-webpack-plugin": "^3.2.0",
+    "jest": "^24.8.0",
     "prop-types": "^15.7.2",
     "react-docgen-typescript-loader": "^3.1.0",
+    "react-test-renderer": "^16.9.0",
+    "ts-jest": "^24.0.2",
     "ts-loader": "^6.0.4",
     "ts-node": "^8.3.0",
     "typescript": "^3.5.3",
@@ -45,6 +55,8 @@
     "webpack-dev-server": "^3.7.2"
   },
   "dependencies": {
+    "babel-jest": "^24.8.0",
+    "js-test": "0.0.1",
     "lodash-es": "^4.17.14",
     "ramda": "^0.26.1",
     "react": "^16.8.6",
