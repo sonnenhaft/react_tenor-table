@@ -1,8 +1,8 @@
-import { createElement } from 'react'
-import { render } from 'react-dom'
-import { App } from './App'
+import { createElement } from 'react';
+import { render } from 'react-dom';
+import { App } from './App';
 
 render(
-    createElement(App),
-    document.getElementById('create-article-form')
-)
+  createElement(App),
+  document.getElementById('create-article-form')
+);
