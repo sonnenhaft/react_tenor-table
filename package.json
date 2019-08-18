@@ -1,12 +1,12 @@
 {
-  "name": "quick-webpack-bundle-analyzer-test-repo",
+  "name": "tenor-table",
   "version": "1.0.0",
-  "description": "Proper ts config webpack with storybook and configured ts-jest coverage configs for react project",
+  "description": "TenorTable - test task in react",
   "main": "index.js",
   "scripts": {
     "start:production": "webpack-dev-server --open --mode production --port=8001",
     "start": "webpack-dev-server --open --mode development ",
-    "build": "webpack --mode production && build-storybook -c .storybook -o docs/storybook && npm run jest:coverage",
+    "build": "webpack --mode production",
     "storybook": "start-storybook -p 6006",
     "jest": "jest --watchAll -i",
     "jest:coverage": "jest --collect-coverage -i"
