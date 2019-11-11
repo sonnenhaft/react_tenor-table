@@ -16,7 +16,7 @@ module.exports = (ignored: any, env: SystemEnvVariables): Configuration => ({
     ]
   },
   output: {
-    path: require('path').resolve(__dirname, 'docs'),
+    path: require('path').resolve(__dirname, 'build'),
     filename: 'index.js'
   },
   plugins: [
